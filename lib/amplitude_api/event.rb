@@ -21,7 +21,7 @@ class AmplitudeAPI
         if value.respond_to?(:id)
           value.id
         else
-          value || AmplitudeAPI::USER_WITH_NO_ACCOUNT
+          value
         end
     end
 
