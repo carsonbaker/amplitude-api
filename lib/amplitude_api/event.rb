@@ -42,7 +42,8 @@ class AmplitudeAPI
 
     # @return [ Hash ] Optional properties
     def optional_properties
-      %i(device_id time ip platform country insert_id).map do |prop|
+      %i(device_id time ip platform country insert_id language session_id
+      os_name os_version user_agent device_mode).map do |prop|
         val = prop == :time ? formatted_time : send(prop)
         val ? [prop, val] : nil
       end.compact.to_h

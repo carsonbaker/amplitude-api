@@ -17,9 +17,9 @@ class AmplitudeAPI
         {
           api_key: nil,
           secret_key: nil,
-          whitelist: %i(user_id device_id event_type time
+          whitelist: %i(user_id session_id device_id event_type time language os_name os_version user_agent
                         event_properties user_properties time ip platform country insert_id
-                        revenue_type price quantity product_id),
+                        revenue_type price quantity product_id device_brand device_mode),
           time_formatter: ->(time) { time ? time.to_i * 1_000 : nil },
           event_properties_formatter: ->(props) { props || {} },
           user_properties_formatter: ->(props) { props || {} }
